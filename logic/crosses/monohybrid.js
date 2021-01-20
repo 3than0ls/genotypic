@@ -6,9 +6,12 @@ const monohybrid = (fatherGenotype, motherGenotype, payload) => {
       const genotype = [fatherGenotype[0][i], motherGenotype[0][j]]
         .sort()
         .join('')
-      const phenotype = genotype[0]
+      const phenotype = genotype
+        .split('')
+        .filter((_, index) => index % 2 === 0)
+        .join('')
 
-      // you lii=ke math? i dont. randomly entered in values until i got the below values, producing a wanted result
+      // you like math? i dont. randomly entered in values until i got the below values, producing a wanted result
       payload.punnettSquare[j][i] = {
         genotype,
         phenotype,

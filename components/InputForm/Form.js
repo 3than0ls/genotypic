@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import CharactersInput from './CharactersInput'
 import GenotypeInput from './GenotypeInput'
 import Label from './Label'
@@ -18,6 +19,18 @@ export default function Form({
       setGeneSex({ ...geneSex, [letter]: newGene })
     }
   }
+
+  axios
+    .get('/api/calculateOffspring', {
+      params: {
+        fatherGenotype: 'AABB',
+        motherGenotype: 'aabb',
+      },
+    })
+    .then(function (response) {
+      // handle success
+      console.log(response)
+    })
 
   return (
     <div className="w-128 border-b-4 border-r-4 border-blue-300 px-16 py-8 rounded-br-2xl">

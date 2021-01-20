@@ -1,8 +1,9 @@
 import dihybrid from './crosses/dihybrid.js'
 import monohybrid from './crosses/monohybrid.js'
+import tetrahybrid from './crosses/tetrahybrid.js'
 import trihybrid from './crosses/trihybrid.js'
 
-// todo: make tetrahybrid, pentahybrid
+// todo: fix tryhybrid punnett, make tetrahybrid, pentahybrid
 // in the future, investigate in recursive functions to solve
 
 const makeArray = (genotype) => {
@@ -63,10 +64,12 @@ const calculateOffspring = (fatherGenotype, motherGenotype) => {
     case 3:
       trihybrid(fatherGenotype, motherGenotype, payload)
       break
+    case 4:
+      tetrahybrid(fatherGenotype, motherGenotype, payload)
+      break
   }
   payload.phenotypeCombinationsNum = Object.keys(payload.phenotypes).length
-  console.log(payload)
+  return payload
 }
-calculateOffspring('Aa', 'Aa')
-
-// export default calculateOffspring
+calculateOffspring('AaBbCcDd', 'AaBbCcDd')
+export default calculateOffspring

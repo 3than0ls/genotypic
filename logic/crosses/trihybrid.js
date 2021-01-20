@@ -15,10 +15,12 @@ const trihybrid = (fatherGenotype, motherGenotype, payload) => {
                 [fatherGenotype[0][i], motherGenotype[0][j]].sort().join('') +
                 [fatherGenotype[1][k], motherGenotype[1][l]].sort().join('') +
                 [fatherGenotype[2][m], motherGenotype[2][n]].sort().join('')
-              const phenotype = genotype[0] + genotype[2] + genotype[4]
-
+              const phenotype = genotype
+                .split('')
+                .filter((_, index) => index % 2 === 0)
+                .join('')
               // you like math? i dont. randomly entered in values until i got the below values, producing a wanted result
-              payload.punnettSquare[4 * j + 2 * l + m][4 * i + 2 * k + m] = {
+              payload.punnettSquare[4 * j + 2 * l + m][4 * i + 2 * k + n] = {
                 genotype,
                 phenotype,
               }
@@ -39,5 +41,4 @@ const trihybrid = (fatherGenotype, motherGenotype, payload) => {
     }
   }
 }
-
 export default trihybrid

@@ -5,9 +5,7 @@ export default function Home() {
   const [characters, setCharacters] = useState(1)
   const [fatherGenes, setFatherGene] = useState({ a: 'Aa' })
   const [motherGenes, setMotherGene] = useState({ a: 'Aa' })
-  useEffect(() => {
-    console.log(characters)
-  }, [fatherGenes])
+
   return (
     <div>
       <Form
