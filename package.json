@@ -2,6 +2,7 @@
   "name": "genes",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,7 +11,8 @@
   "dependencies": {
     "next": "10.0.5",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-select": "^3.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.3",
