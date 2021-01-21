@@ -7,7 +7,9 @@ export default function List({ object, total }) {
     return keyValuePairs[0].map((key, index) => (
       <tr key={`${key}`} id={key}>
         <td className="w-48">{keyValuePairs[0][index]}</td>
-        <td className="w-48">{`${keyValuePairs[1][index]} out of ${total}`}</td>
+        <td className="w-48">{`${keyValuePairs[1][index]} out of ${total} (${
+          (keyValuePairs[1][index] / total) * 100
+        }%)`}</td>
       </tr>
     ))
   }
@@ -23,8 +25,8 @@ export default function List({ object, total }) {
       <table className="table-auto text-xl">
         <thead>
           <tr>
-            <th className="w-48">Genotype</th>
-            <th className="w-48">Chance</th>
+            <th className="w-96">Genotype</th>
+            <th className="w-96">Chance</th>
           </tr>
         </thead>
         <tbody>

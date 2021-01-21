@@ -1,8 +1,12 @@
 import React from 'react'
 
 export default function PunnettSquare({ punnettSquare, gametes }) {
-  let scale = punnettSquare[0].length
+  let scale = punnettSquare[0].length <= 16 ? punnettSquare[0].length : null
   const sizes = {
+    [null]: {
+      textScale: null,
+      scale: null,
+    },
     2: {
       textScale: 1.05,
       scale: 1.05,
@@ -87,12 +91,17 @@ export default function PunnettSquare({ punnettSquare, gametes }) {
     }
     return elements
   }
-  return (
+  return scale ? (
     <table
       style={tableStyle}
-      className="table-fixed m-auto border-8 border-app-red-1 rounded-2xl"
+      className="table-fixed m-auto border-8 border-app-red-1"
     >
       {generatePunnettTable()}
     </table>
+  ) : (
+    <div className="m-auto border-8 border-app-red-1 p-6">
+      There are too many possible combinations, so a Punnett Square would be
+      innefective to display them, and so no Punnett Square is shown.
+    </div>
   )
 }
