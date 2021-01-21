@@ -41,7 +41,7 @@ const calculateOffspring = (fatherGenotype, motherGenotype) => {
       /* a 2d array populated with 2^n empty arrays where n is the number of characters */
       ...Array(2 ** characters).keys(),
     ].map(() => []),
-    genotypeCombinationsNum: fatherGenotype.length ** 2, // number of genotype combinations produced, equal to gametes squared.
+    combinationsNum: 2 ** fatherGenotype.length, // number of genotype combinations produced, equal to gametes squared, also the size of the punnett square.
     uniqueGenotypeNum: undefined, // number of unique genotype
     genotypes: {
       /* a key:value obj with key being geno and value being chance */
@@ -69,9 +69,8 @@ const calculateOffspring = (fatherGenotype, motherGenotype) => {
       break
   }
 
-  payload.uniqueGenotypeNum = payload.uniqueGenotypes.length
-
-  payload.uniquePhenotypeNum = payload.uniquePhenotypes.length
+  payload.uniqueGenotypeNum = new Set(Object.keys(payload.genotypes)).size
+  payload.uniquePhenotypeNum = new Set(Object.keys(payload.phenotypes)).size
 
   return payload
 }

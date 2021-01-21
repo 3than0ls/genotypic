@@ -16,7 +16,7 @@ export default function PunnettSquare({ punnettSquare, gametes }) {
       scale: 0.32,
     },
     16: {
-      textScale: 0.001,
+      textScale: 0.2,
       scale: 0.2,
     },
   }
@@ -76,7 +76,7 @@ export default function PunnettSquare({ punnettSquare, gametes }) {
             /* this is the table contents */
             <td
               style={genotypeSizeStyles}
-              className="align-middle text-center p-3 border-2"
+              className="align-middle text-center border-2"
               key={`${obj.genotype}${index}`}
             >
               {obj.genotype}

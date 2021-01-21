@@ -12,16 +12,22 @@ export default function Data({ data }) {
         punnettSquare={data.punnettSquare}
         gametes={data.gametes}
       />
-      <Label text="Number of produced genotypes" />
+      <Label text="Number of combinations produced" />
+      <div className="text-2xl font-bold text-center">
+        {data.combinationsNum}
+      </div>
       <Label text="Number of unique genotypes" />
+      <div className="text-2xl font-bold text-center">
+        {data.uniqueGenotypeNum}
+      </div>
       <Label text="Number of unique phenotypes" />
+      <div className="text-2xl font-bold text-center">
+        {data.uniquePhenotypeNum}
+      </div>
       <Label text="Genotypes" />
-      <List object={data.genotypes} total={data.genotypeCombinationsNum} />
+      <List object={data.genotypes} total={data.combinationsNum} />
       <Label text="Phenotypes" />
-      <List
-        object={data.phenotypes}
-        total={data.uniquePhenotypeCombinationsNum}
-      />
+      <List object={data.phenotypes} total={data.combinationsNum} />
     </div>
   )
 }
