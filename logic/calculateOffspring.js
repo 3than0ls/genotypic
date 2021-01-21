@@ -30,25 +30,25 @@ const calculateOffspring = (fatherGenotype, motherGenotype) => {
   const characters = fatherGenotype.length / 2
   // gonna be one huge freakin payload
   const payload = {
-    genotypeCombinationsNum: fatherGenotype.length ** 2,
-    phenotypeCombinationsNum: undefined,
+    testcross: `${fatherGenotype} x ${motherGenotype}`, // testcross equation
+    fatherGenotype, // father's genotype
+    motherGenotype, // mother's genotype
     gametes: [
-      [
-        /* father gametes */
-      ],
-      [
-        /* mother gametes */
-      ],
+      [], // father gametes
+      [], // mother gametes
     ],
     punnettSquare: [
       /* a 2d array populated with 2^n empty arrays where n is the number of characters */
       ...Array(2 ** characters).keys(),
     ].map(() => []),
+    genotypeCombinationsNum: fatherGenotype.length ** 2, // number of genotype combinations produced, equal to gametes squared.
+    uniqueGenotypeCombinationsNum: undefined, // number of unique genotype
     genotypes: {
-      /* should be a key:value obj with key being geno and value being chance */
+      /* a key:value obj with key being geno and value being chance */
     },
+    phenotypeCombinationsNum: undefined, // number of phenotypes that can be made
     phenotypes: {
-      /* should be a key:value obj with key being pheno and value being chance */
+      /* a key:value obj with key being pheno and value being chance */
     },
   }
   fatherGenotype = makeArray(fatherGenotype)
@@ -68,8 +68,14 @@ const calculateOffspring = (fatherGenotype, motherGenotype) => {
       tetrahybrid(fatherGenotype, motherGenotype, payload)
       break
   }
-  payload.phenotypeCombinationsNum = Object.keys(payload.phenotypes).length
+
+  payload.uniqueGenotypes = new Set(Object.keys(payload.genotypes))
+  payload.uniqueGenotypesNum = payload.uniqueGenotypes.length
+
+  payload.uniquePhenotypes = new Set(Object.keys(payload.phenotypes))
+  payload.uniquePhenotypesNum = payload.uniquePhenotypes.length
+
   return payload
 }
-calculateOffspring('AaBbCcDd', 'AaBbCcDd')
+
 export default calculateOffspring

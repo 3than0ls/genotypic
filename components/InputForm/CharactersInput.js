@@ -36,7 +36,7 @@ export default function CharactersInput({
     },
   ]
   return (
-    <div>
+    <div className="text-app-black-1">
       <Select
         options={options}
         defaultValue={options[0]}

@@ -1,12 +1,10 @@
-const alphabet = 'abcdefgh'
+const alphabet = 'abcd'
 const populatePersonGenes = (person, setPerson, newCharacters) => {
-  console.log(newCharacters)
   let dict = person
   if (Object.keys(dict).length < newCharacters) {
     // add onto
     for (let i = 0; i < newCharacters; i++) {
       let letter = alphabet[i]
-      console.log(letter)
       if (!dict[letter]) {
         dict[letter] = `${letter.toUpperCase()}${letter.toLowerCase()}`
       }

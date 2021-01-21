@@ -17,7 +17,7 @@ export default function GenotypeInput({ letter, setGene }) {
     },
   ]
   return (
-    <div>
+    <div className="text-app-black-1 mb-1">
       <Select
         options={options}
         defaultValue={options[1]}

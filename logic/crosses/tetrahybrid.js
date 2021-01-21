@@ -62,7 +62,6 @@ const tetrahybrid = (fatherGenotype, motherGenotype, payload) => {
       }
     }
   }
-  console.log(payload.punnettSquare)
 }
 
 export default tetrahybrid
