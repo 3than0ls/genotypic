@@ -20,7 +20,7 @@ const trihybrid = (fatherGenotype, motherGenotype, payload) => {
                 .filter((_, index) => index % 2 === 0)
                 .join('')
               // you like math? i dont. randomly entered in values until i got the below values, producing a wanted result
-              payload.punnettSquare[4 * j + 2 * l + m][4 * i + 2 * k + n] = {
+              payload.punnettSquare[4 * j + 2 * l + n][4 * i + 2 * k + m] = {
                 genotype,
                 phenotype,
               }

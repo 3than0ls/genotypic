@@ -38,8 +38,8 @@ const tetrahybrid = (fatherGenotype, motherGenotype, payload) => {
                     .join('')
 
                   // you like math? i dont. randomly entered in values until i got the below values, producing a wanted result
-                  payload.punnettSquare[8 * j + 4 * l + 2 * m + o][
-                    8 * i + 4 * k + 2 * n + p
+                  payload.punnettSquare[8 * j + 4 * l + 2 * n + p][
+                    8 * i + 4 * k + 2 * m + o
                   ] = {
                     genotype,
                     phenotype,

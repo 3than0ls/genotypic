@@ -1,7 +1,9 @@
 import dihybrid from './crosses/dihybrid.js'
 import monohybrid from './crosses/monohybrid.js'
-import tetrahybrid from './crosses/tetrahybrid.js'
 import trihybrid from './crosses/trihybrid.js'
+import tetrahybrid from './crosses/tetrahybrid.js'
+import pentahybrid from './crosses/pentahybrid.js'
+import sextuplehybrid from './crosses/sextuplehybrid.js'
 
 // todo: fix tryhybrid punnett, make tetrahybrid, pentahybrid
 // in the future, investigate in recursive functions to solve
@@ -66,6 +68,12 @@ const calculateOffspring = (fatherGenotype, motherGenotype) => {
       break
     case 4:
       tetrahybrid(fatherGenotype, motherGenotype, payload)
+      break
+    case 5:
+      pentahybrid(fatherGenotype, motherGenotype, payload)
+      break
+    case 6:
+      sextuplehybrid(fatherGenotype, motherGenotype, payload)
       break
   }
 

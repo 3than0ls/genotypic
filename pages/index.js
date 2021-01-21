@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react'
 import OpenButton from '../components/InputForm/OpenButton'
 import Landing from '../components/Landing/Landing'
 
+// todo: 5-hybrid crosses, punnett square interactivity, code cleanup, include percentage value
+
 export default function Home() {
   // should probs combine these three in some sorta state object
   const [characters, setCharacters] = useState(1)
