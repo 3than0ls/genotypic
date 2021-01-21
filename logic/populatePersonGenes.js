@@ -1,4 +1,4 @@
-const alphabet = 'abcd'
+const alphabet = 'abcdef'
 const populatePersonGenes = (person, setPerson, newCharacters) => {
   let dict = person
   if (Object.keys(dict).length < newCharacters) {

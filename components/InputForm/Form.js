@@ -5,6 +5,7 @@ import GenotypeInput from './GenotypeInput'
 import Label from '../Label'
 import determineGenotypeFromObj from '~/logic/determineGenotypeFromObj'
 import CalculateButton from './CalculateButton'
+import CloseButton from './CloseButton'
 
 export default function Form({
   fatherGenes,
@@ -14,8 +15,10 @@ export default function Form({
   characters,
   setCharacters,
   setData,
+  menuOpen,
+  toggleMenu,
 }) {
-  const alphabet = 'abcd'
+  const alphabet = 'abcdef'
   const addGene = (geneSex, setGeneSex) => {
     return (letter, newGene) => {
       setGeneSex({ ...geneSex, [letter]: newGene })
@@ -23,6 +26,7 @@ export default function Form({
   }
 
   const onClick = () => {
+    toggleMenu()
     axios
       .get('/api/calculateOffspring', {
         params: {
@@ -37,7 +41,13 @@ export default function Form({
   }
 
   return (
-    <div className="fixed flex-shrink-0 min-width-96 md:w-96 xl:w-128 h-screen text-app-gray-2 bg-app-black-2 border-r-8 border-app-red-3 px-16 py-8 overflow-y-auto shadow-2xl">
+    <div
+      className={`fixed z-20 flex-shrink-0 min-width-96 md:w-96 xl:w-128 h-screen text-app-gray-2 
+      bg-app-black-2 border-r-8 border-app-red-3 px-16 py-8 overflow-y-auto shadow-2xl
+      transform transition duration-500 ease-in-out
+      ${menuOpen ? '' : '-translate-x-full'}`}
+    >
+      <CloseButton toggleMenu={toggleMenu} />
       <Label text="Characters" />
       <CharactersInput
         fatherGenes={fatherGenes}
@@ -68,7 +78,7 @@ export default function Form({
 
       <hr className="border-t-3 my-12 border-white" />
       <Label text="Testcross" />
-      <div className="text-2xl text-black bg-app-gray-2 w-full border-4 border-app-red-2 rounded-2xl p-2 text-center">
+      <div className="text-2xl text-black bg-app-gray-2 w-full border-4 border-transparent rounded-2xl p-2 text-center">
         {`${determineGenotypeFromObj(fatherGenes)} x 
           ${determineGenotypeFromObj(motherGenes)}`}
       </div>
