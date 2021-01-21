@@ -16,6 +16,12 @@ export default function About() {
         made a website to go along with it, just to get out of my rut
       </div>
       <hr className="border-t-3 my-3 border-app-gray-1" />
+      <div className="my-2">
+        The actual logic for calculating the stuff and inner workings behind the
+        API are actually garbage and written strangely, so you can only have up
+        to a tetrahybrid cross. Chalk it up to convenience.
+      </div>
+      <hr className="border-t-3 my-3 border-app-gray-1" />
 
       <a
         className="text-app-red-3 hover:underline my-2"
