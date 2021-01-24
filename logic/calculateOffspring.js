@@ -32,7 +32,7 @@ const calculateOffspring = (fatherGenotype, motherGenotype) => {
   const characters = fatherGenotype.length / 2
   // gonna be one huge freakin payload
   const payload = {
-    testcross: `${fatherGenotype} x ${motherGenotype}`, // testcross equation
+    equation: `${fatherGenotype} x ${motherGenotype}`, // equation
     fatherGenotype, // father's genotype
     motherGenotype, // mother's genotype
     gametes: [

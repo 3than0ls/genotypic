@@ -92,7 +92,7 @@ export default function Form({
       ))}
 
       <hr className="border-t-3 my-12 border-white" />
-      <Label text="Testcross" />
+      <Label text="Equation" />
       <div className="text-2xl text-black bg-app-gray-2 w-full border-4 border-transparent rounded-2xl p-2 text-center">
         {`${determineGenotypeFromObj(fatherGenes)} x 
           ${determineGenotypeFromObj(motherGenes)}`}

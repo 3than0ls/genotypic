@@ -23,7 +23,7 @@ export default function Data({ data }) {
 
   return (
     <div className="bg-app-gray-2 flex flex-col p-5 flex-grow items-center text-center min-w-192">
-      <Label text={`Testcross: ${data.testcross}`} />
+      <Label text={`Equation: ${data.equation}`} />
       <Label text="Punnett Square" />
       <PunnettSquare
         punnettSquare={data.punnettSquare}

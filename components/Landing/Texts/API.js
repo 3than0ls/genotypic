@@ -20,8 +20,8 @@ export default function API() {
         <div className="text-left">
           <CodeBlock
             text={`{
-  // testcross equation
-  testcross: String,
+  // punnett square equation
+  equation: String,
   // father's genotype
   fatherGenotype: String, 
   // mother's genotype

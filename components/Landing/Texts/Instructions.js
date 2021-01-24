@@ -10,7 +10,7 @@ export default function Instructions() {
       <div className="my-2">
         First, click on the expand menu button, located in the top left corner.
         Then, enter the genotype of the mother and father of the offspring, and
-        affirm that you have the correct equation in the Testcross box. Finally,
+        affirm that you have the correct equation in the Equation box. Finally,
         hit calculate to recieve the results. After calculating, you can view
         certain results, and search for certain genotypes and phenotypes to get
         their probabilities.
