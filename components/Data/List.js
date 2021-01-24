@@ -19,7 +19,7 @@ export default function List({ object, total }) {
         type="text"
         placeholder="Search for a sequence"
         value={searchValue}
-        className="w-1/6 px-4 py-2 mt-1 mb-2 rounded-2xl focus:outline-none text-center"
+        className="w-64 px-4 py-2 mt-1 mb-2 rounded-2xl focus:outline-none text-center"
         onChange={(e) => setSearchValue(e.target.value)}
       />
       <table className="table-auto text-xl">

@@ -1,10 +1,10 @@
 import Form from '~/components/InputForm/Form'
 import Data from '~/components/Data/Data'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import OpenButton from '../components/InputForm/OpenButton'
 import Landing from '../components/Landing/Landing'
 
-// todo: punnett square interactivity, code cleanup
+// todo: punnett square interactivity, code cleanup, ability to change the letter, hide list
 
 export default function Home() {
   // should probs combine these three in some sorta state object

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import CharactersInput from './CharactersInput'
 import GenotypeInput from './GenotypeInput'
 import Label from '../Label'
-import determineGenotypeFromObj from '~/logic/determineGenotypeFromObj'
+import determineGenotypeFromObj from '~/utils/determineGenotypeFromObj'
 import CalculateButton from './CalculateButton'
 import CloseButton from './CloseButton'
 
@@ -24,7 +24,22 @@ export default function Form({
       setGeneSex({ ...geneSex, [letter]: newGene })
     }
   }
+  const [characterLetters, setCharacterLetters] = useState(
+    [...Array(characters).keys()].map((num) => alphabet[num])
+  )
+  // const setCharacterLetter = (index) => {
+  //   const replaceCharacter = (newLetter) => {
+  //     const newCharacterLetters = [...characterLetters]
+  //     setCharacters({ ...characters })
+  //     newCharacterLetters[index] = newLetter
+  //     setCharacterLetters(newCharacterLetters)
+  //   }
+  //   return replaceCharacter
+  // }
 
+  // useEffect(() => {
+  //   console.log(characterLetters)
+  // }, [characterLetters])
   const onClick = () => {
     toggleMenu()
     axios

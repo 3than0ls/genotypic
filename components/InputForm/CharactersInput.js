@@ -1,6 +1,6 @@
 import React from 'react'
 import Select from 'react-select'
-import populatePersonGenes from '~/logic/populatePersonGenes'
+import populatePersonGenes from '~/utils/populatePersonGenes'
 
 export default function CharactersInput({
   fatherGenes,

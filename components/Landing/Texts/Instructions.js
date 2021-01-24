@@ -17,10 +17,9 @@ export default function Instructions() {
       </div>
       <hr className="border-t-3 my-3 border-app-gray-1" />
       <div className="my-2">
-        This application is capable of calculating monohybrid, dihybrid,
-        trihybrid, and tetrahybrid crosses. Note that all crosses are autosomal,
-        and none of characters/traits are linked genes. To learn more about
-        Mendelian Genetics,{' '}
+        This application is capable of calculating up to six characters. Note
+        that all crosses are autosomal, and none of characters/traits are linked
+        genes. To learn more about Mendelian Genetics,{' '}
         <a
           className="text-app-red-3 hover:underline"
           href="https://knowgenetics.org/mendelian-genetics/#:~:text=The%20Mendelian%20Concept%20of%20a%20Gene&text=Mendel%20instead%20believed%20that%20heredity,passing%2Don%20of%20these%20units."

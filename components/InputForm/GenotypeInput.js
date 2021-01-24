@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Select from 'react-select'
 
 export default function GenotypeInput({ letter, setGene }) {
@@ -16,13 +16,26 @@ export default function GenotypeInput({ letter, setGene }) {
       label: `${letter.toLowerCase()}${letter.toLowerCase()} (Recessive Homozygous)`,
     },
   ]
+  // const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+  // const alphabetOptions = alphabet.split('').map((letter) => {
+  //   return { value: letter, label: letter }
+  // })
   return (
-    <div className="text-app-black-1 mb-1">
-      <Select
-        options={options}
-        defaultValue={options[1]}
-        onChange={(option) => setGene(letter, option.value)}
-      />
+    <div className="text-app-black-1 mb-1 flex flex-row">
+      <div className="w-3/4 mr-1">
+        <Select
+          options={options}
+          defaultValue={options[1]}
+          onChange={(option) => setGene(letter, option.value)}
+        />
+      </div>
+      {/* <div className=" ml-1 w-1/4">
+        <Select
+          options={alphabetOptions}
+          defaultValue={alphabetOptions[alphabet.indexOf(letter)]}
+          onChange={(option) => setLetter(option.value)}
+        />
+      </div> */}
     </div>
   )
 }
