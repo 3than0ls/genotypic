@@ -42,23 +42,39 @@ export default function Data({ data }) {
         {data.uniquePhenotypeNum}
       </div>
       <Label text="Genotypes" />
-      <List object={data.genotypes} total={data.combinationsNum} />
+      <List
+        object={data.genotypes}
+        total={data.combinationsNum}
+        label="Genotypes"
+      />
       <Label text="Phenotypes" />
-      <List object={data.phenotypes} total={data.combinationsNum} />
+      <List
+        object={data.phenotypes}
+        total={data.combinationsNum}
+        label="Phenotypes"
+      />
 
       <Label text="Number of unique gametes from father" />
       <div className="text-2xl font-bold text-center">
         {uniqueFatherGametesNum}
       </div>
       <Label text="Father's Gametes" />
-      <List object={fatherGametes} total={data.gametes[0].length} />
+      <List
+        object={fatherGametes}
+        total={data.gametes[0].length}
+        label="Father's Gametes"
+      />
 
       <Label text="Number of unique gametes from mother" />
       <div className="text-2xl font-bold text-center">
         {uniqueMotherGametesNum}
       </div>
       <Label text="Mother's Gametes" />
-      <List object={motherGametes} total={data.gametes[1].length} />
+      <List
+        object={motherGametes}
+        total={data.gametes[1].length}
+        label="Mother's Gametes"
+      />
     </div>
   )
 }
