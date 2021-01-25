@@ -73,7 +73,6 @@ const pentahybrid = (fatherGenotype, motherGenotype, payload) => {
       }
     }
   }
-  console.log(payload.gametes)
 }
 
 export default pentahybrid

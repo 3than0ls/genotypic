@@ -6,7 +6,6 @@ import List from './List'
 export default function Data({ data }) {
   const uniqueFatherGametesNum = new Set(data.gametes[0]).size
   const uniqueMotherGametesNum = new Set(data.gametes[1]).size
-  console.log(data)
   const fatherGametes = {}
   for (let fatherGamete of data.gametes[0]) {
     if (!fatherGametes[fatherGamete]) {
