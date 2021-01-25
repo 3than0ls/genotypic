@@ -42,6 +42,16 @@ export default function Data({ data }) {
       <div className="text-2xl font-bold text-center">
         {data.uniquePhenotypeNum}
       </div>
+
+      <Label text="Number of unique gametes from father" />
+      <div className="text-2xl font-bold text-center">
+        {uniqueFatherGametesNum}
+      </div>
+      <Label text="Number of unique gametes from mother" />
+      <div className="text-2xl font-bold text-center">
+        {uniqueMotherGametesNum}
+      </div>
+
       <Label text="Genotypes" />
       <List
         object={data.genotypes}
@@ -55,10 +65,6 @@ export default function Data({ data }) {
         label="Phenotypes"
       />
 
-      <Label text="Number of unique gametes from father" />
-      <div className="text-2xl font-bold text-center">
-        {uniqueFatherGametesNum}
-      </div>
       <Label text="Father's Gametes" />
       <List
         object={fatherGametes}
@@ -66,10 +72,6 @@ export default function Data({ data }) {
         label="Father's Gametes"
       />
 
-      <Label text="Number of unique gametes from mother" />
-      <div className="text-2xl font-bold text-center">
-        {uniqueMotherGametesNum}
-      </div>
       <Label text="Mother's Gametes" />
       <List
         object={motherGametes}
