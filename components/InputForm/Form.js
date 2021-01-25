@@ -24,9 +24,9 @@ export default function Form({
       setGeneSex({ ...geneSex, [letter]: newGene })
     }
   }
-  const [characterLetters, setCharacterLetters] = useState(
-    [...Array(characters).keys()].map((num) => alphabet[num])
-  )
+  // const [characterLetters, setCharacterLetters] = useState(
+  //   [...Array(characters).keys()].map((num) => alphabet[num])
+  // )
   // const setCharacterLetter = (index) => {
   //   const replaceCharacter = (newLetter) => {
   //     const newCharacterLetters = [...characterLetters]

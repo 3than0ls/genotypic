@@ -17,6 +17,7 @@ const pentahybrid = (fatherGenotype, motherGenotype, payload) => {
               motherGenotype[0][i] +
                 motherGenotype[1][j] +
                 motherGenotype[2][k] +
+                motherGenotype[3][l] +
                 motherGenotype[4][m]
             )
             for (let n = 0; n < motherGenotype[2].length; n++) {
@@ -37,7 +38,7 @@ const pentahybrid = (fatherGenotype, motherGenotype, payload) => {
                         [fatherGenotype[3][o], motherGenotype[3][p]]
                           .sort()
                           .join('') +
-                        [fatherGenotype[3][q], motherGenotype[3][r]]
+                        [fatherGenotype[4][q], motherGenotype[4][r]]
                           .sort()
                           .join('')
                       const phenotype = genotype
@@ -72,6 +73,7 @@ const pentahybrid = (fatherGenotype, motherGenotype, payload) => {
       }
     }
   }
+  console.log(payload.gametes)
 }
 
 export default pentahybrid

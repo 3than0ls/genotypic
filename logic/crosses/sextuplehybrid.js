@@ -18,6 +18,7 @@ const sextuplehybrid = (fatherGenotype, motherGenotype, payload) => {
                 motherGenotype[0][i] +
                   motherGenotype[1][j] +
                   motherGenotype[2][k] +
+                  motherGenotype[3][l] +
                   motherGenotype[4][m]
               )
               for (let o = 0; o < fatherGenotype[3].length; o++) {
