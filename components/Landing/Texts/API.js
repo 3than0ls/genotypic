@@ -12,7 +12,9 @@ export default function API() {
         This application has one API endpoint at /api/calculateOffspring. You
         must supply two query parameter values, first being the father's
         genotype (as a string), and the second being the mother's genotype (as a
-        string). Examples are "AaBb", "AaBBcc", etc.
+        string). Examples are "AaBb", "AaBBcc", etc. The API isn't structured or
+        created very well, and is susceptible to spam, and doesn't handle
+        incorrect queries very well.
       </div>
       <hr className="border-t-3 my-3 border-app-gray-1" />
       <div className="w-196">

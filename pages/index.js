@@ -4,7 +4,9 @@ import { useState } from 'react'
 import OpenButton from '../components/InputForm/OpenButton'
 import Landing from '../components/Landing/Landing'
 
-// todo: punnett square interactivity, code cleanup, ability to change the letter, hide list
+// todo: punnett square color interactivity, code cleanup, ability to change the letter
+
+// features to add: sex-linked genes, blood type genes, linked? genes
 
 export default function Home() {
   // should probs combine these three in some sorta state object
