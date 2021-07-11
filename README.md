@@ -1,3 +1,12 @@
+To visit the site, go to https://genotypic-3than0ls.vercel.app, and more information about the app can be found there in the Instructions, API Usage, and About tab.
+
+
+
+If you want to make some changes and launch your own version, I kept the Next.js auto-generated README info below.
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
